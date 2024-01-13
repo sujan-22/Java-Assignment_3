@@ -14,12 +14,14 @@ import static javafx.application.Application.launch;
 import static javafx.scene.paint.Color.*;
 
 /**
- * Use this template to create drawings in FX. Change the name of the class and
- * put your own name as author below. Change the size of the canvas and the
- * window title where marked and add your drawing code where marked.
- *
- * @author Sujan Rokad, 000882948
+ * Author:                 Sujan Rokad, 000882948
+ * Authorship statement:   I, Sujan Rokad, 000882948, certify that this material is my original work.
+ *                         No other person's work has been used without due acknowledgement.
+ * Purpose:                Define a JavaFX application to draw two villages and a castle.
+ *                         The application demonstrates the usage of JavaFX graphics features
+ *                         to create a visual representation of villages and a castle on a canvas.
  */
+
 public class TwoVillages extends Application {
 
     /**
@@ -39,25 +41,24 @@ public class TwoVillages extends Application {
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         // YOUR CODE STARTS HERE
-//        set background color to darkgrey
+        // set background color to darkgrey
         gc.setFill(DARKBLUE);
-//        set background color to whole canvas
-        gc.fillRect(0,0,1050,850);
+        // set background color to the whole canvas
+        gc.fillRect(0, 0, 1050, 850);
 
-        Village v1 = new Village(); //Create an object of village class
-        Village v2 = new Village(); //Create a second object of village class
+        Village v1 = new Village(); // Create an object of the village class
+        Village v2 = new Village(); // Create a second object of the village class
 
-//        Calls a constructor and make an object of House class and set the parameters
-        House h1 = new House(400, 1+(int)(50+(Math.random()*320)), Color.BLACK);
+        // Calls a constructor and makes an object of the House class and set the parameters
+        House h1 = new House(400, 1 + (int) (50 + (Math.random() * 320)), Color.BLACK);
 
-//        calls a constructor of a village class and sets parameters of two objects
-        v1.State("Liverpool", 40, 10+(int)(200 + (Math.random()*400)), Color.CYAN);
-        v2.State("Ash Ville", 650, 20+(int)(100 + (Math.random()*350)), Color.DARK_GRAY);
+        // calls a constructor of a village class and sets parameters of two objects
+        v1.State("Liverpool", 40, 10 + (int) (200 + (Math.random() * 400)), Color.CYAN);
+        v2.State("Ash Ville", 650, 20 + (int) (100 + (Math.random() * 350)), Color.DARK_GRAY);
 
-
-        v1.draw(gc);  //draws first village
-        v2.draw(gc); //draws second village
-        h1.draw(gc); //draws king's castle
+        v1.draw(gc);  // draws the first village
+        v2.draw(gc); // draws the second village
+        h1.draw(gc); // draws the king's castle
 
         // YOUR CODE STOPS HERE
 
